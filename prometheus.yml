@@ -29,3 +29,9 @@ scrape_configs:
       - targets: 
         - "localhost:9090"
         - "10.250.14.1:9100"
+
+  - job_name: "AWS"
+    metrics_path: "/actuator/prometheus"
+    static_config:
+      - targets:
+        - "hello-springrest-dev.eu-west-1.elasticbeanstalk.com:80"
